@@ -34,11 +34,11 @@ The project covers **data preprocessing, feature engineering, model training, ev
 ---
 
 ## 🧠 Tech Stack
-- Python
-- Scikit-learn
-- Natural Language Processing (NLP)
-- Streamlit
-- Joblib
+streamlit
+scikit-learn
+joblib
+numpy
+pandas
 
 ---
 
