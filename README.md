@@ -6,7 +6,7 @@ The project covers **data preprocessing, feature engineering, model training, ev
 ---
 
 ## 🚀 Live Demo
-🔗 https://your-streamlit-app-url.streamlit.app
+🔗 [https://your-streamlit-app-url.streamlit.app](https://sms-spam-classifier-aigvmbxnsm4e7blggsxem2.streamlit.app/)
 
 ---
 
