@@ -6,6 +6,10 @@ The system classifies SMS messages as **Spam or Ham**, displays a calibrated spa
 
 ---
 
+## Live Demo
+
+🔗 [Try the SMS Spam Detection App]([YOUR_STREAMLIT_URL](https://j-sms-spam-detector.streamlit.app/))
+
 ## Project Overview
 
 The initial model used TF-IDF with Multinomial Naive Bayes.
