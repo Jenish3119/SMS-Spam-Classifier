@@ -1,45 +1,53 @@
- 📩 SMS Spam Detection System
+# SMS Spam Detection System
 
-An end-to-end **NLP-based Spam Detection web application** that classifies SMS messages as **Spam** or **Ham** using machine learning.  
-The project covers **data preprocessing, feature engineering, model training, evaluation, and cloud deployment**.
+An end-to-end SMS spam classification application built using Machine Learning and NLP.
 
----
-
-## 🚀 Live Demo
-🔗 [https://your-streamlit-app-url.streamlit.app](https://sms-spam-classifier-aigvmbxnsm4e7blggsxem2.streamlit.app/)
+The system classifies SMS messages as **Spam or Ham**, displays a calibrated spam-risk score, and allows users to block confirmed spam senders.
 
 ---
 
-## 📌 Key Features
-- Text preprocessing and normalization
-- TF-IDF feature extraction
-- Multinomial Naive Bayes classification
-- High-precision spam detection
-- Real-time prediction with confidence score
-- WordCloud-based dataset insights
-- Streamlit-based interactive UI
+## Project Overview
+
+The initial model used TF-IDF with Multinomial Naive Bayes.
+
+Although the baseline model achieved high precision, its spam recall was relatively low, meaning several spam messages were incorrectly classified as Ham.
+
+To improve spam detection, the project was upgraded using:
+
+- Character-level TF-IDF
+- Linear Support Vector Machine
+- Stratified Cross-Validation
+- GridSearchCV
+- Decision Threshold Optimization
+- Probability Calibration
+- Error Analysis
+
+The final model was deployed using Streamlit with a simple sender-blocking workflow.
 
 ---
 
-## 📊 Model Performance
-| Metric | Value |
-|------|------|
-| Accuracy | **95.45%** |
-| Precision (Spam) | **100%** |
-| Recall (Spam) | **64.12%** |
-| F1-score | **78.14%** |
+## Model Performance
 
-> The model prioritizes precision to minimize false spam classifications.
-
----
-
-## 🧠 Tech Stack
-streamlit
-scikit-learn
-joblib
-numpy
-pandas
+| Metric      | Baseline Model | Optimized Model |
+| ----------- | -------------: | --------------: |
+| Accuracy    |         95.45% |          99.32% |
+| Precision   |        100.00% |          98.44% |
+| Recall      |         64.12% |          96.18% |
+| F1-Score    |         78.14% |          97.30% |
+| Missed Spam |             47 |               5 |
 
 ---
 
-## 🔧 Project Structure
+## Machine Learning Pipeline
+
+```text
+Raw SMS
+   ↓
+Character-level TF-IDF
+   ↓
+Tuned Linear SVM
+   ↓
+Optimized Decision Threshold
+   ↓
+Spam / Ham Prediction
+```
